@@ -1,0 +1,38 @@
+body {
+    background-color: #000; /* Czarne tło */
+    color: #fff;
+    font-family: sans-serif;
+    margin: 0;
+    overflow: hidden; /* Ukrywa scrollbary */
+}
+
+header, main, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrowanie elementów */
+    padding: 20px;
+    opacity: 0.1; /* Początkowa przezroczystość (cień) */
+    transition: opacity 0.3s ease; /* Płynne przejście przezroczystości */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Zawijanie obrazów w razie potrzeby */
+    justify-content: center; /* Centrowanie obrazów */
+    gap: 20px;
+}
+
+.gallery img {
+    max-width: 300px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Dodatkowy cień pod obrazami */
+    transition: transform 0.3s ease;
+}
+
+/* Efekt rozświetlania */
+body:hover header, body:hover main, body:hover footer {
+    opacity: 0.7; /* Zwiększona przezroczystość po najechaniu kursorem na body */
+}
+.gallery img:hover {
+    transform: scale(1.05); /* delikatne powiększenie po najechaniu kursorem na obraz */
+}
